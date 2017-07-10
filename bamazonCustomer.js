@@ -18,9 +18,7 @@ function start(){
 	connection.query("SELECT * FROM products", function(err, res){
 		console.log("-----------------");
 		for (var i=0; i<res.length; i++){
-			
-			console.log(res[i].item_id + " | " + res[i].product_name + " | " + res[i].department_name + " | $" + res[i].price)
-			
+			console.log(res[i].item_id + " | " + res[i].product_name + " | " + res[i].department_name + " | $" + res[i].price);
 		}
 		console.log("-----------------");
 		inquirer.prompt([
