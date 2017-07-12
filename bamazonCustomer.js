@@ -45,9 +45,11 @@ function start(){
 				}
 			}
 		]).then(function(user){
-			if (res[i].stock_quantity <= 0){
+			var product = res.filter(x => x.item_id == user.id_input);
+			var stock_quantity = product.map(x => x.stock_quantity)[0];
+			if (user.quantity > stock_quantity){
 				console.log("-----------------");
-				console.log("Insufficient quantity! Try another item.")
+				console.log("Insufficient quantity! Try again.");
 				console.log("-----------------");
 				start();
 			} else {
@@ -63,10 +65,12 @@ function start(){
 				);
 				console.log("-----------------");
 				console.log("Thank you for shopping with Bamazon! Your purchase will ship whenever we feel like it!");
-				console.log("You bought this: " + res[i].product_name + " x " + user.quantity);
-				console.log("Total cost of purchase: $" + (user.quantity*res[i].price));
+				console.log("You bought this: " + product[0].product_name + " x " + user.quantity);
+				console.log("Total cost of purchase: $" + (user.quantity*product[0].price));
 				console.log("-----------------");
 			}
+		}).catch(function(e) {
+			console.log(e)
 		});
 	});
 }

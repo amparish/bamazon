@@ -10,12 +10,12 @@ CREATE TABLE products(
 );
 
 INSERT INTO products (item_id, product_name, department_name, price, stock_quantity)
-VALUE (474060, "Something Cool", "Cool Stuff", 45.92, 15);
+VALUE (474060, "Something Cool", "Cool Stuff", 45.92, 20);
 INSERT INTO products (item_id, product_name, department_name, price, stock_quantity)
-VALUE (527490, "Shoes. Gotta have shoes", "Clothing", 50.00, 10);
+VALUE (527490, "Shoes. Gotta have shoes", "Clothing", 50.00, 20);
 INSERT INTO products (item_id, product_name, department_name, price, stock_quantity)
-VALUE (363647, "Good Burger (DVD)", "Movies", 24.95, 6);
+VALUE (363647, "Good Burger (DVD)", "Movies", 24.95, 20);
 INSERT INTO products (item_id, product_name, department_name, price, stock_quantity)
-VALUE (388391, "Sega Dreamcast", "Video Games", 299.99, 5);
+VALUE (388391, "Sega Dreamcast", "Video Games", 299.99, 20);
 INSERT INTO products (item_id, product_name, department_name, price, stock_quantity)
-VALUE (671495, "Mystery Item", "Miscellaneous", 8000.99, 1);
+VALUE (671495, "Mystery Item", "Miscellaneous", 8000.99, 20);
